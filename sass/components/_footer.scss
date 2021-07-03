@@ -1,0 +1,133 @@
+.footer {
+  background-color: $footer-bcg;
+  min-width: 1200px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-logo {
+  font-family: $secondary-font;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+
+  color: $logo-first;
+  &_highlight {
+    color: $activ-elements;
+  }
+}
+
+.footer-items {
+  display: flex;
+}
+
+.footer-adress {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  min-width: 231px;
+}
+
+.footer-adress_adres {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+
+  color: $logo-first;
+}
+
+.footer-adress_contacts {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+
+  color: $ftr-text-color;
+
+  margin-top: 9px;
+}
+
+.footer-welcome {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0;
+  min-width: 206px;
+  margin-left: 70px;
+}
+
+.footer-welcome_title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $logo-first;
+
+  margin-bottom: 20px;
+}
+.footer-welcome_actions {
+  @extend %actions;
+}
+
+.footer-welcome_actions-items {
+  @extend %actions-items;
+}
+
+.footer-welcome-subskribe {
+  margin-left: 93px;
+}
+
+.footer-welcome-subskribe_title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $logo-first;
+
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.footer-welcom_form {
+  display: flex;
+  height: 50px;
+}
+
+.footer-welcome_button {
+  @extend%buttons;
+  display: flex;
+  padding: 10px 29px;
+  justify-content: space-between;
+  align-items: center;
+
+  min-width: 200px;
+  min-height: 50px;
+
+  color: $logo-first;
+  background-color: $activ-elements;
+  box-shadow: $button-shadow;
+  border-radius: 4px;
+  &:hover,
+  :focus {
+    background-color: $activ-button;
+  }
+}
+
+.footer-welcom_mail {
+  min-width: 358px;
+  margin-right: 12px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  color: $logo-first;
+  &:focus {
+    outline: none;
+  }
+}

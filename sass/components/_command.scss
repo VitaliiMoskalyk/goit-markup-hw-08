@@ -1,0 +1,57 @@
+.command {
+  @extend %section;
+  background-color: $inactiv-button;
+}
+
+.command-title {
+  @extend %title-of-sections;
+}
+.command-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: calc(100% / 4);
+}
+
+.command-list-items {
+  &:not(:nth-child(4n + 4)) {
+    margin-right: 30px;
+    flex-wrap: wrap;
+  }
+
+  text-align: center;
+  background-color: $logo-first;
+  box-shadow: $block-shadow;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.command-list-items_name {
+  line-height: 1.2;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.command-list-items_proffession {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+
+  color: $paragraph;
+
+  margin-bottom: 16px;
+}
+.command-list-items_actions {
+  @extend %actions;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-bottom: 30px;
+}
+
+.command-list-items_actions-items {
+  @extend %actions-items;
+  fill: $inactiv-elemements;
+}

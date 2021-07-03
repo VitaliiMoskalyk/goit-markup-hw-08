@@ -1,0 +1,194 @@
+.hero-modal {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: $modal-overlay;
+  transition: $modal-transitions;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: 0;
+  pointer-events: none;
+  transition: $modal-transitions;
+}
+
+.hero-modal-components {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  min-height: 581px;
+
+  background-color: $logo-first;
+  box-shadow: $block-shadow;
+  border-radius: 4px;
+}
+
+.hero-modal_button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  padding: 4px;
+  top: 0;
+  right: 0;
+
+  margin: 8px 8px;
+
+  background-color: transparent;
+  border: $modal-border;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+  transition: $form-button-transitions;
+  &:hover,
+  :focus {
+    fill: $activ-elements;
+  }
+}
+
+.hero-modal-form {
+  display: flex;
+  flex-direction: column;
+
+  padding: 40px;
+  justify-items: left;
+  width: 100%;
+  height: max-content;
+}
+
+.hero-modal-form-title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+
+  margin-bottom: 12px;
+}
+
+.hero-modal-form-conteiner {
+  position: relative;
+}
+
+.hero-modal-form-conteiner svg {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 33px;
+  left: 10px;
+}
+
+.hero-modal-form_label {
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+  color: $paragraph;
+}
+
+.hero-modal-form_input {
+  width: 100%;
+  height: 40px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  padding: 11px 30px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  cursor: pointer;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-modal-form_input:hover,
+.hero-modal-form_input:focus {
+  outline: none;
+  border: $activ-elements 1px solid;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-modal-form_input:focus + .hero-modal-form_svg,
+.hero-modal-form_input:hover + .hero-modal-form_svg {
+  fill: $activ-elements;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-modal-form_input-comment {
+  display: block;
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  outline: none;
+  resize: none;
+
+  cursor: pointer;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.166;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.hero-modal-form_input-comment:focus,
+.hero-modal-form_input-comment:hover {
+  outline: none;
+  border: $activ-elements 1px solid;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-modal-form ~ svg {
+  fill: $activ-elements;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-modal-form_svg {
+  pointer-events: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-modal-form_input-policy {
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+.hero-modal-form_input-policy-txt {
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: $paragraph;
+  align-items: center;
+  &_blue {
+    color: $activ-elements;
+    text-decoration: underline $activ-elements;
+    cursor: pointer;
+  }
+}
+
+.hero-modal-form_input-submit {
+  @extend%buttons;
+  min-width: 200px;
+  min-height: 50px;
+  color: #fff;
+  background-color: #2196f3;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  &:hover,
+  :focus {
+    background-color: $activ-button;
+  }
+}

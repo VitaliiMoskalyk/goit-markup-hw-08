@@ -1,0 +1,51 @@
+.container {
+  @extend %container;
+}
+
+.hero {
+  @extend %section;
+  padding: 0;
+
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background: $hero-bcg;
+  background-image: linear-gradient(to right, $hero-overlay, $hero-overlay),
+    url(../images/background-img-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  & .container {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+  }
+}
+
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  margin-bottom: 30px;
+
+  color: $logo-first;
+}
+
+.hero-title-button {
+  @extend%buttons;
+  min-width: 200px;
+  min-height: 50px;
+  padding: 10px;
+
+  color: $logo-first;
+  background-color: $activ-elements;
+  box-shadow: $button-shadow;
+  border-radius: 4px;
+  &:hover,
+  :focus {
+    background-color: $activ-button;
+  }
+}

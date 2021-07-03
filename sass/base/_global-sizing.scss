@@ -1,0 +1,42 @@
+%container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+%section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  min-width: 1200px;
+}
+%title-of-sections {
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+%actions {
+  display: flex;
+  justify-content: space-between;
+
+  &-items:hover,
+  :focus {
+    background-color: $activ-elements;
+    fill: $logo-first;
+  }
+}
+
+%actions-items {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  display: inline-block;
+
+  border-radius: 50%;
+  fill: $logo-first;
+  background-color: $bcg-inactiv-buttons;
+}
