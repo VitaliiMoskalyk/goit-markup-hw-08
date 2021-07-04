@@ -19,4 +19,6 @@ a {
 img {
   display: block;
   object-fit: cover;
+  min-width: 100%;
+  height: auto;
 }

@@ -1,15 +1,27 @@
 .footer {
   background-color: $footer-bcg;
-  min-width: 1200px;
   padding-top: 60px;
   padding-bottom: 60px;
+  height: 605px;
+  @media screen and(min-width:768px) {
+    height: 463px;
+  }
+  @media screen and(min-width:1200px) {
+    height: auto;
+  }
 }
 
 .footer-logo {
+  display: flex;
+  justify-content: center;
+  @media screen and(min-width:1200px) {
+    justify-content: flex-start;
+    font-size: 26px;
+  }
   font-family: $secondary-font;
   font-weight: bold;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.166;
   letter-spacing: 0.03em;
 
   color: $logo-first;
@@ -17,16 +29,29 @@
     color: $activ-elements;
   }
 }
-
 .footer-items {
   display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media screen and(min-width:768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  @media screen and(min-width:1200px) {
+    justify-content: start;
+  }
 }
 
 .footer-adress {
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 20px;
+
   flex-direction: column;
-  min-width: 231px;
 }
 
 .footer-adress_adres {
@@ -52,10 +77,17 @@
 .footer-welcome {
   display: flex;
   flex-direction: column;
-
+  align-items: center;
   padding: 0;
-  min-width: 206px;
-  margin-left: 70px;
+  @media screen and(min-width:1200px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    min-width: 206px;
+    margin-left: 70px;
+  }
+
+  /*min-width: 206px;
+  margin-left: 70px;*/
 }
 
 .footer-welcome_title {
@@ -75,14 +107,27 @@
 
 .footer-welcome_actions-items {
   @extend %actions-items;
+  margin-right: 10px;
+  &.linkedin {
+    margin-right: 0;
+  }
 }
 
 .footer-welcome-subskribe {
-  margin-left: 93px;
+  @media screen and(min-width:768px) {
+    margin-left: 190px;
+  }
+  @media screen and(min-width:1200px) {
+    margin-left: 100px;
+  }
+
+  /*margin-left: 93px;*/
 }
 
 .footer-welcome-subskribe_title {
   font-style: normal;
+  align-items: center;
+  justify-content: center;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.143;
@@ -92,21 +137,31 @@
 
   margin-bottom: 20px;
   display: flex;
+  @media screen and(min-width:1200px) {
+    justify-content: start;
+  }
 }
 
 .footer-welcom_form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 50px;
+  @media screen and(min-width:1200px) {
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 
 .footer-welcome_button {
   @extend%buttons;
   display: flex;
+  margin-top: 20px;
   padding: 10px 29px;
   justify-content: space-between;
   align-items: center;
 
-  min-width: 200px;
+  max-width: 200px;
   min-height: 50px;
 
   color: $logo-first;
@@ -121,7 +176,11 @@
 
 .footer-welcom_mail {
   min-width: 358px;
-  margin-right: 12px;
+  @media screen and(min-width:1200px) {
+    margin-right: 12px;
+  }
+  /*margin-right: 12px;*/
+
   padding: 15px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
