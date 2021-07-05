@@ -12,6 +12,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and(min-width:768px) {
+    display: inline-flex;
+  }
 }
 
 .header-logo {
@@ -31,34 +34,56 @@
 }
 
 .header-navigation {
-  /*display: flex;*/
   display: none;
+  @media screen and (min-width: 768px) {
+    display: inline-flex;
+    justify-content: end;
+  }
 }
 
 .header-navigation-list {
   display: flex;
-  margin-left: 93px;
+  @media screen and(min-width:1200px) {
+    margin-left: 89px;
+  }
+  margin-left: 50px;
   align-items: center;
   &:last-child {
-    margin-left: 280px;
+    @media screen and(min-width:1200px) {
+      margin-left: 280px;
+    }
     align-items: center;
+    margin-left: 100px;
   }
 }
 
+.header-navigation-list.mail-tel {
+  @media screen and(min-width:768px) and (max-width: 1199px) {
+    flex-direction: column;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    align-items: start;
+  }
+}
 .header-navigation-list-item {
   position: relative;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 40px;
+  line-height: 1.175;
+
   text-decoration: none;
   letter-spacing: 0.02em;
   color: $headsletter;
   cursor: pointer;
 
   display: block;
-  padding-top: 32px;
+  padding-top: 0;
   padding-bottom: 32px;
-
+  @media screen and(min-width:768px) {
+    font-size: 14px;
+    line-height: 1.14;
+    padding-top: 32px;
+  }
   &:hover,
   :focus {
     color: $activ-elements;
@@ -75,6 +100,11 @@
   }
   &:not(:last-child) {
     margin-right: 50px;
+  }
+}
+@media screen and(max-width:1199px) {
+  .mail-tel .header-navigation-list-items {
+    margin: 0;
   }
 }
 
@@ -95,8 +125,8 @@
 
 .header-navigation-list-item_contacts {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.167;
   letter-spacing: 0.02em;
   text-decoration: none;
   color: $paragraph;
@@ -107,9 +137,16 @@
 
   align-items: center;
   fill: currentColor;
-
+  @media screen and (max-width: 1199px) {
+    padding: 0;
+    margin-bottom: 10px;
+  }
   &:hover,
   :focus {
+    @media screen and (max-width: 767px) {
+      font-size: 34px;
+      line-height: 1.176;
+    }
     color: $activ-elements;
   }
 }
