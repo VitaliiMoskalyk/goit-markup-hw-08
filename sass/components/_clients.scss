@@ -17,7 +17,8 @@
     flex-wrap: wrap;
   }
   width: auto;
-  :focus {
+  :focus,
+  :hover {
     border: 1px solid $activ-elements;
     fill: $activ-elements;
   }

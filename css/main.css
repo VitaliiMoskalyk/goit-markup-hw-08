@@ -970,7 +970,8 @@ button,
   }
 }
 
-.clients-companies :focus {
+.clients-companies :focus,
+.clients-companies :hover {
   border: 1px solid #2196f3;
   fill: #2196f3;
 }
