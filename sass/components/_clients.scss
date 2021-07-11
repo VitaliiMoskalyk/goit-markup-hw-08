@@ -17,11 +17,6 @@
     flex-wrap: wrap;
   }
   width: auto;
-  :focus,
-  :hover {
-    border: 1px solid $activ-elements;
-    fill: $activ-elements;
-  }
 }
 
 .clients-companies li {

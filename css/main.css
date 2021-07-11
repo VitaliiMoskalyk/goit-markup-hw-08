@@ -970,12 +970,6 @@ button,
   }
 }
 
-.clients-companies :focus,
-.clients-companies :hover {
-  border: 1px solid #2196f3;
-  fill: #2196f3;
-}
-
 @media screen and (min-width: 480px) {
   .clients-companies li {
     -webkit-box-orient: horizontal;
