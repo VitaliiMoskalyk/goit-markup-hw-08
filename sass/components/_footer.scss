@@ -100,7 +100,12 @@
   color: $logo-first;
 
   margin-bottom: 20px;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
 }
+
 .footer-welcome_actions {
   @extend %actions;
 }
@@ -137,6 +142,9 @@
 
   margin-bottom: 20px;
   display: flex;
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
   @media screen and(min-width:1200px) {
     justify-content: start;
   }
